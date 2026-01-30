@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "contains.c"
+#include "contains.h"
 
 const char *programName = "sw_vers";
 const char *productNameFlag = "-productName";

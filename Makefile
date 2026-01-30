@@ -1,7 +1,7 @@
 PREFIX ?= /usr/local
-PRODUCTNAME ?= "Mac OS X"
-PRODUCTVERSION ?= "10.5.8"
-BUILDVERSION ?= "9L31a"
+PRODUCTNAME ?= '"Mac OS X"'
+PRODUCTVERSION ?= '"10.5.8"'
+BUILDVERSION ?= '"9L31a"'
 
 CC ?= gcc
 CFLAGS += -Wall -Wextra -O3

@@ -3,27 +3,34 @@
 
 #include "contains.h"
 
-const char *programName = "sw_vers";
-const char *productNameFlag = "-productName";
-const char *productVersionFlag = "-productVersion";
-const char *buildVersionFlag = "-buildVersion";
+#ifndef PRODUCTNAME
+#define PRODUCTNAME "MAC OS X"
+#endif
+
+#ifndef PRODUCTVERSION
+#define PRODUCTVERSION "10.5.8"
+#endif
+
+#ifndef BUILDVERSION
+#define BUILDVERSION "9L31a"
+#endif
 
 void printProductName(){
-    puts("@productname@");
+    puts(PRODUCTNAME);
 }
 
 void printProductVersion(){
-    puts("@productversion@");
+    puts(PRODUCTVERSION);
 }
 
 void printBuildVersion(){
-    puts("@buildversion@");
+    puts(BUILDVERSION);
 }
 
 void printAll(){
-    puts("ProductName:    @productname@");
-    puts("ProductVersion: @productversion@");
-    puts("BuildVersion:   @buildversion@");
+    puts("ProductName:    %s", PRODUCTNAME);
+    puts("ProductVersion: %s", PRODUCTVERSION);
+    puts("BuildVersion:   %s", BUILDVERSION);
 }
 
 void main(int argc, char *argv[]){
@@ -33,11 +40,11 @@ void main(int argc, char *argv[]){
     }
 
     int i = 0;
-    if (contains_str(productNameFlag, argv, argc)){
+    if (contains_str("-productName", argv, argc)){
         printProductName();
-    } else if (contains_str(productVersionFlag, argv, argc)){
+    } else if (contains_str("-productVersion", argv, argc)){
         printProductVersion();
-    } else if (contains_str(buildVersionFlag, argv, argc)){
+    } else if (contains_str("-buildVersion", argv, argc)){
         printBuildVersion();
     } else {
         puts("Usage: sw_vers [-productName|-productVersion|-buildVersion]");

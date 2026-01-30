@@ -4,7 +4,7 @@
 #include "contains.h"
 
 #ifndef PRODUCTNAME
-#define PRODUCTNAME "MAC OS X"
+#define PRODUCTNAME "Mac OS X"
 #endif
 
 #ifndef PRODUCTVERSION
@@ -28,9 +28,9 @@ void printBuildVersion(){
 }
 
 void printAll(){
-    puts("ProductName:    %s", PRODUCTNAME);
-    puts("ProductVersion: %s", PRODUCTVERSION);
-    puts("BuildVersion:   %s", BUILDVERSION);
+    printf("ProductName:    %s\n", PRODUCTNAME);
+    printf("ProductVersion: %s\n", PRODUCTVERSION);
+    printf("BuildVersion:   %s\n", BUILDVERSION);
 }
 
 void main(int argc, char *argv[]){

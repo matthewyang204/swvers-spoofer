@@ -37,6 +37,7 @@ obj/
 *.x86_64
 *.hex
 /swvers
+/sw_vers
 
 # Debug files
 *.dSYM/

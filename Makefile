@@ -12,8 +12,8 @@ OBJS = swvers.o contains.o
 sw_vers: $(OBJS)
 	$(CC) $(OBJS) -o sw_vers
 
-main.o: main.c contains.h
-	$(CC) $(CFLAGS) -c main.c
+swvers.o: swvers.c contains.h
+	$(CC) $(CFLAGS) -c swvers.c
 
 contains.o: contains.c contains.h
 	$(CC) $(CFLAGS) -c contains.c

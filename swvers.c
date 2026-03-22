@@ -33,7 +33,7 @@ void printAll(){
     printf("BuildVersion:   %s\n", BUILDVERSION);
 }
 
-void main(int argc, char *argv[]){
+int main(int argc, char *argv[]){
     if (argc == 1){
         printAll();
         return;
@@ -49,4 +49,5 @@ void main(int argc, char *argv[]){
     } else {
         puts("Usage: sw_vers [-productName|-productVersion|-buildVersion]");
     }
+    return 0;
 }
